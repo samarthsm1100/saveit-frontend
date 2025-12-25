@@ -6,13 +6,15 @@ export default function DownloadCard() {
   const [format, setFormat] = useState("mp4");
   const [status, setStatus] = useState("idle"); // idle | downloading | success | failed
 
+  const API = import.meta.env.backend;
+
   const handleDownload = async () => {
     if (!url) return;
     setStatus("downloading");
 
     try {
       const response = await axios.post(
-        "http://localhost:5000/download",
+        API,
         { url, format },
         { responseType: "blob" }
       );
