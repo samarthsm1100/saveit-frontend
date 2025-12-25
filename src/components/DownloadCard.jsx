@@ -14,7 +14,7 @@ export default function DownloadCard() {
 
     try {
       const response = await axios.post(
-        API,
+        API+'/download',
         { url, format },
         { responseType: "blob" }
       );
