@@ -1,0 +1,8 @@
+@import "tailwindcss";
+
+body {
+  font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  background-color: #faf7f2;
+  color: #3b2f2f;
+}
+
